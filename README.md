@@ -33,7 +33,7 @@ npm install
 npm run worker
 ```
 
-Leave this running. It executes workflows on task queue `melissas-cafe`.
+Leave this running. It executes Workflows on task queue `melissas-cafe`.
 
 ### 3. Run the webhook server
 
@@ -61,7 +61,7 @@ Copy the **HTTPS** URL (e.g. `https://abc123.ngrok.io`).
 2. Set the agent’s **webhook URL** to:  
    `https://<your-ngrok-host>/webhook`  
    e.g. `https://abc123.ngrok.io/webhook`
-3. When a call comes in, the agent can send a POST to this URL. This repo starts a workflow from that request.
+3. When a call comes in, the agent can send a POST to this URL. This repo starts a Workflow from that request.
 
 **Coffee order** – POST body must include:
 
@@ -69,7 +69,7 @@ Copy the **HTTPS** URL (e.g. `https://abc123.ngrok.io`).
 - `size` (`small`, `medium`, `large`)
 - `customerName`
 
-**Greeting** – POST body with `greeting` (string) runs the simple greeting workflow instead.
+**Greeting** – POST body with `greeting` (string) runs the simple greeting Workflow instead.
 
 ---
 
@@ -78,9 +78,9 @@ Copy the **HTTPS** URL (e.g. `https://abc123.ngrok.io`).
 | Step | What |
 |------|------|
 | 1 | Temporal server running (`localhost:7233`) |
-| 2 | `npm run worker` – runs workflows |
-| 3 | `npm run webhook` – receives Telnyx webhooks, starts workflows |
+| 2 | `npm run worker` – runs Workflows |
+| 3 | `npm run webhook` – receives Telnyx webhooks, starts Workflows |
 | 4 | `ngrok http 3000` – public URL for the webhook |
 | 5 | Telnyx agent webhook URL = `https://<ngrok-host>/webhook` |
 
-Then: call → Telnyx agent → webhook → Temporal workflow.
+Then: call → Telnyx agent → webhook → Temporal Workflow.
