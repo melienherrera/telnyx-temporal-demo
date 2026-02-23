@@ -1,0 +1,23 @@
+{
+  "name": "telnyx-temporal-demo",
+  "version": "1.0.0",
+  "description": "Minimal webhook-to-Temporal integration for Telnyx voice AI",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "worker": "ts-node src/worker.ts",
+    "webhook": "ts-node src/webhook.ts"
+  },
+  "dependencies": {
+    "@temporalio/client": "^1.10.0",
+    "@temporalio/worker": "^1.10.0",
+    "@temporalio/workflow": "^1.10.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
